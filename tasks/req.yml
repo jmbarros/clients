@@ -1,0 +1,10 @@
+---
+  - name: installing ansible application requiriments
+    yum: name={{ item }} state=installed
+    with_items:     
+    - epel-release 
+    - libselinux-python
+    - python
+    - python-devel
+    - python-virtualenv
+    - python-setuptools

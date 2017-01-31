@@ -1,0 +1,25 @@
+---
+  #- name: install epel
+  #  yum: name=epel-release state=installed
+
+  - name: installing epel repository and appliacations
+    yum: name={{ item }} state=installed
+    with_items:     
+    - libselinux-python
+    - python
+    - python-devel
+    - python-virtualenv
+    - python-setuptools
+    - epel-release  
+
+  #- name: Add the local repository.
+  #  yum_repository:
+  #    name: local
+  #    description: Local repository.
+  #    baseurl: "{{ local_repo }}"
+  #    enabled: yes
+  #    gpgcheck: no
+
+#  - name: upgrade all packages
+#    yum: name=* state=latest
+#    update_cache: yes

@@ -1,0 +1,7 @@
+---
+  - include: admin_key.yml
+  - include: req.yml
+  - include: repo.yml
+  - include: sec.yml
+  - include: sshd.yml
+  - include: net.yml
